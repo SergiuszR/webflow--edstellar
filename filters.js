@@ -36,6 +36,8 @@ window.addEventListener("load", () => {
   let trainingCategoriesList = document.querySelector("#categories-list");
   let trainingSubcategoriesList = document.querySelector("#subcategories-list");
 
+  // let subcategoriesArray = Array.from(trainingSubcategoriesList);
+
   let typeItems = document.querySelectorAll("[training]"); // training items
   let categoryItems = Array.from(document.querySelectorAll("[cat]")); // category items
   let subCategoryItems = Array.from(document.querySelectorAll("[sub]")); // subcategory items
@@ -44,13 +46,35 @@ window.addEventListener("load", () => {
   trainingSubcategoriesList.innerHTML = "";
 
   // console.log(typeItems);
-  // console.log(categoryItems);
+  console.log(categoryItems);
   // console.log(subCategoryItems);
+
+  const intervalD = setInterval(function () {
+    let typeInputs = document.querySelectorAll(
+      "input[name='training']:checked"
+    );
+    let subcategoryInputs = document.querySelectorAll(
+      "input[name='subcategory']:checked"
+    );
+    let categoryInputs = document.querySelectorAll(
+      "input[name='category']:checked"
+    );
+
+    if (
+      typeInputs.length < 1 &&
+      categoryInputs.length < 1 &&
+      subcategoryInputs.length < 1
+    ) {
+      trainingCategoriesList.innerHTML = "";
+      trainingSubcategoriesList.innerHTML = "";
+    }
+    // console.log(subcategoryInputs)
+  }, 100);
 
   typeItems.forEach((n) => {
     n.addEventListener("click", () => {
       let label = n.getAttribute("training");
-      // console.log(label);
+
       let filtered = categoryItems.filter(
         (n) => n.getAttribute("cat") === label
       );

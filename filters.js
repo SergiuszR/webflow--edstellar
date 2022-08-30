@@ -1,4 +1,18 @@
 window.addEventListener("load", () => {
+  let courseSearchTrigger = document.querySelector("#course-search-trigger");
+  let coursesFilter = document.querySelector("#filters");
+  let courseSearchInput = document.querySelector("#course-search-input");
+  let searchTrigger = document.querySelector("#search-tirgger");
+
+  searchTrigger.style.pointerEvents = "none";
+  courseSearchTrigger.addEventListener("click", () => {
+    coursesFilter.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+    courseSearchInput.focus();
+  });
+
   let filterHeader = document.querySelector(".filter_header");
   let sectionHeadWithSearch = document.querySelector(
     ".section-head.with-search"

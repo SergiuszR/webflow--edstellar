@@ -2,9 +2,9 @@ window.addEventListener("load", () => {
   let courseSearchTrigger = document.querySelector("#course-search-trigger");
   let coursesFilter = document.querySelector("#filters");
   let courseSearchInput = document.querySelector("#course-search-input");
-  let searchTrigger = document.querySelector("#search-tirgger");
+  // let searchTrigger = document.querySelector("#search-tirgger");
 
-  searchTrigger.style.pointerEvents = "none";
+  // searchTrigger.style.pointerEvents = "none";
   courseSearchTrigger.addEventListener("click", () => {
     coursesFilter.scrollIntoView({
       behavior: "smooth",

@@ -68,7 +68,7 @@ window.addEventListener("load", () => {
   // trainingSubcategoriesList.innerHTML = "";
 
   // console.log(typeItems);
-  console.log(categoryItems);
+  // console.log(categoryItems);
   // console.log(subCategoryItems);
 
   const intervalD = setInterval(function () {

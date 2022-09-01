@@ -82,14 +82,14 @@ window.addEventListener("load", () => {
       "input[name='category']:checked"
     );
 
-    if (typeInputs.length < 1) {
-      let filtered = categoryItems.filter(
-        (n) => n.getAttribute("name") === "category"
-      );
-      filtered.forEach((n) => {
-        trainingCategoriesList.append(n);
-      });
-    }
+    // if (typeInputs.length < 1) {
+    //   let filtered = categoryItems.filter(
+    //     (n) => n.getAttribute("name") === "category"
+    //   );
+    //   filtered.forEach((n) => {
+    //     trainingCategoriesList.append(n);
+    //   });
+    // }
     // console.log(subcategoryInputs)
   }, 100);
 

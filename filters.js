@@ -13,13 +13,13 @@ window.addEventListener("load", () => {
   //   courseSearchInput.focus();
   // });
 
-  let expertSlider = document.querySelector(".experts-slider-content");
-  let expertSliderHeight = window.getComputedStyle(expertSlider).height;
-  let expertSlide = document.querySelectorAll(".slide--expert");
+  //   let expertSlider = document.querySelector(".experts-slider-content");
+  //   let expertSliderHeight = window.getComputedStyle(expertSlider).height;
+  //   let expertSlide = document.querySelectorAll(".slide--expert");
 
-expertSlide.forEach((n) => {
-  n.style.height = `${expertSliderHeight}px`
-})
+  // expertSlide.forEach((n) => {
+  //   n.style.height = `${expertSliderHeight}px`
+  // })
 
   let filterHeader = document.querySelector(".filter_header");
   let sectionHeadWithSearch = document.querySelector(

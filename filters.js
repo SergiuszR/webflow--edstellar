@@ -87,8 +87,12 @@ window.addEventListener("load", () => {
       categoryInputs.length < 1 &&
       subcategoryInputs.length < 1
     ) {
-      // trainingCategoriesList.innerHTML = "";
-      // trainingSubcategoriesList.innerHTML = "";
+      let filtered = categoryItems.filter(
+        (n) => n.getAttribute("name") === "category"
+      );
+      filtered.forEach((n) => {
+        trainingCategoriesList.append(n);
+      });
     }
     // console.log(subcategoryInputs)
   }, 100);

@@ -24,12 +24,12 @@ window.addEventListener("load", navbarBg);
 window.addEventListener("scroll", navbarBg);
 window.addEventListener("resize", navbarBg);
 
-window.addEventListener("load", () => {
-  let expertSlider = document.querySelector(".experts-slider-content");
-  let expertSliderHeight = window.getComputedStyle(expertSlider).height;
-  let expertSlide = document.querySelectorAll(".slide--expert");
+// window.addEventListener("load", () => {
+//   let expertSlider = document.querySelector(".experts-slider-content");
+//   let expertSliderHeight = window.getComputedStyle(expertSlider).height;
+//   let expertSlide = document.querySelectorAll(".slide--expert");
 
-  expertSlide.forEach((n) => {
-    n.style.height = `${expertSliderHeight}px`;
-  });
-});
+//   expertSlide.forEach((n) => {
+//     n.style.height = `${expertSliderHeight}px`;
+//   });
+// });

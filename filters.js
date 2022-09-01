@@ -13,14 +13,6 @@ window.addEventListener("load", () => {
   //   courseSearchInput.focus();
   // });
 
-  let expertSlider = document.querySelector(".experts-slider-content");
-  let expertSliderHeight = window.getComputedStyle(expertSlider).height;
-  let expertSlide = document.querySelectorAll(".slide--expert");
-
-  expertSlide.style.height = `${expertSliderHeight}px;
-
-
-
   let filterHeader = document.querySelector(".filter_header");
   let sectionHeadWithSearch = document.querySelector(
     ".section-head.with-search"

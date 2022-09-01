@@ -56,8 +56,8 @@ window.addEventListener("load", () => {
   let categoryItems = Array.from(document.querySelectorAll("[cat]")); // category items
   let subCategoryItems = Array.from(document.querySelectorAll("[sub]")); // subcategory items
 
-  trainingCategoriesList.innerHTML = "";
-  trainingSubcategoriesList.innerHTML = "";
+  // trainingCategoriesList.innerHTML = "";
+  // trainingSubcategoriesList.innerHTML = "";
 
   // console.log(typeItems);
   console.log(categoryItems);
@@ -79,8 +79,8 @@ window.addEventListener("load", () => {
       categoryInputs.length < 1 &&
       subcategoryInputs.length < 1
     ) {
-      trainingCategoriesList.innerHTML = "";
-      trainingSubcategoriesList.innerHTML = "";
+      // trainingCategoriesList.innerHTML = "";
+      // trainingSubcategoriesList.innerHTML = "";
     }
     // console.log(subcategoryInputs)
   }, 100);

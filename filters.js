@@ -82,11 +82,7 @@ window.addEventListener("load", () => {
       "input[name='category']:checked"
     );
 
-    if (
-      typeInputs.length < 1 &&
-      categoryInputs.length < 1 &&
-      subcategoryInputs.length < 1
-    ) {
+    if (typeInputs.length < 1) {
       let filtered = categoryItems.filter(
         (n) => n.getAttribute("name") === "category"
       );

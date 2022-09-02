@@ -1,97 +1,60 @@
-// navigation bar in expert page
+function runCounter() {
+  var Cont = { val: 0 },
+    NewVal1 = 100;
+  NewVal2 = 10453;
+  NewVal3 = 63;
 
-let options = {
-  threshold: 1.0,
-};
-
-const firstStep = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      let stepOneNumber = document.querySelector("#step-1");
-      stepOneNumber.classList.remove("non-saturate");
-      stepOneNumber.nextElementSibling.classList.remove("in-active");
-      // console.log(entry);
-    } else {
-      let stepOneNumber = document.querySelector("#step-1");
-      stepOneNumber.classList.add("non-saturate");
-      stepOneNumber.nextElementSibling.classList.add("in-active");
+  gsap.to(Cont, 5, {
+    scrollTrigger: ".milestones-wrapper",
+    val: NewVal1,
+    roundProps: "val",
+    onUpdate: function () {
+      document.getElementById("counter1").innerHTML = Cont.val;
     }
   });
-}, options);
 
-const secondStep = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      let stepTwoNumber = document.querySelector("#step-2");
-      stepTwoNumber.classList.remove("non-saturate");
-      stepTwoNumber.nextElementSibling.classList.remove("in-active");
-    } else {
-      let stepTwoNumber = document.querySelector("#step-2");
-      stepTwoNumber.classList.add("non-saturate");
-      stepTwoNumber.nextElementSibling.classList.add("in-active");
+  gsap.to(Cont, 5, {
+    scrollTrigger: ".milestones-wrapper",
+    val: NewVal2,
+    roundProps: "val",
+    onUpdate: function () {
+      document.getElementById("counter2").innerHTML = Cont.val;
     }
   });
-}, options);
 
-const thirdStep = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      let stepThreeNumber = document.querySelector("#step-3");
-      stepThreeNumber.classList.remove("non-saturate");
-      stepThreeNumber.nextElementSibling.classList.remove("in-active");
-    } else {
-      let stepThreeNumber = document.querySelector("#step-3");
-      stepThreeNumber.classList.add("non-saturate");
-      stepThreeNumber.nextElementSibling.classList.add("in-active");
+  gsap.to(Cont, 5, {
+    scrollTrigger: ".milestones-wrapper",
+    val: NewVal3,
+    roundProps: "val",
+    onUpdate: function () {
+      document.getElementById("counter3").innerHTML = Cont.val;
     }
   });
-}, options);
+}
 
-const fourthStep = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      let stepFourNumber = document.querySelector("#step-4");
-      stepFourNumber.classList.remove("non-saturate");
-      stepFourNumber.nextElementSibling.classList.remove("in-active");
+      runCounter();
+      let lnk = document.createElement("link");
+      lnk.type = "text/css";
+      lnk.href = "https://jh1t6w.csb.app/animation.css";
+      lnk.rel = "stylesheet";
+      lnk.setAttribute("data", "animation");
+      document.getElementsByTagName("head")[0].appendChild(lnk);
+      // console.log(typeof lnk);
+      return;
     } else {
-      let stepFourNumber = document.querySelector("#step-4");
-      stepFourNumber.classList.add("non-saturate");
-      stepFourNumber.nextElementSibling.classList.add("in-active");
+      let head = document.getElementsByTagName("head")[0];
+      let animationCss = head.lastChild;
+      let attribute = animationCss.getAttribute("data");
+
+      if (attribute === "animation") {
+        head.removeChild(animationCss);
+      } else {
+      }
     }
   });
-}, options);
+});
 
-const fifthStep = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      let stepFiveNumber = document.querySelector("#step-5");
-      stepFiveNumber.classList.remove("non-saturate");
-      stepFiveNumber.nextElementSibling.classList.remove("in-active");
-    } else {
-      let stepFiveNumber = document.querySelector("#step-5");
-      stepFiveNumber.classList.add("non-saturate");
-      stepFiveNumber.nextElementSibling.classList.add("in-active");
-    }
-  });
-}, options);
-
-const sixthStep = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      let stepSixNumber = document.querySelector("#step-6");
-      stepSixNumber.classList.remove("non-saturate");
-      stepSixNumber.nextElementSibling.classList.remove("in-active");
-    } else {
-      let stepSixNumber = document.querySelector("#step-6");
-      stepSixNumber.classList.add("non-saturate");
-      stepSixNumber.nextElementSibling.classList.add("in-active");
-    }
-  });
-}, options);
-
-firstStep.observe(document.querySelector("#registration"));
-secondStep.observe(document.querySelector("#configure"));
-thirdStep.observe(document.querySelector("#design"));
-fourthStep.observe(document.querySelector("#post"));
-fifthStep.observe(document.querySelector("#leave"));
-sixthStep.observe(document.querySelector("#employees"));
+observer.observe(document.querySelector(".milestones-wrapper"));

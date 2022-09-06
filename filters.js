@@ -293,12 +293,17 @@ window.addEventListener("load", () => {
   ).children;
   let pickedSortDropdownArr = Array.from(pickedSortDropdown);
 
-  window.addEventListener("click", () => {
-    pickedSortDropdownArr.forEach((n) => {
-      let el = document.getElementsByClassName("w-dropdown-link w--current");
-      // el[0].innerHTML = ""; //
-      pickedSort.innerHTML = el[0].textContent;
-    });
+  window.addEventListener("click", (e) => {
+    try {
+      // console.log(e.target);
+      pickedSortDropdownArr.forEach((n) => {
+        let el = document.getElementsByClassName("w-dropdown-link w--current");
+        // el[0].innerHTML = ""; //
+        pickedSort.innerHTML = el[0].textContent;
+      });
+    } catch {
+      console.log("Catched - dropdown source error. Non-relative.");
+    }
   });
 
   // console.log(pickedSortDropdown.children);
@@ -361,9 +366,10 @@ window.addEventListener("load", () => {
 
       filtered.forEach((n) => {
         trainingSubcategoriesList.append(n);
+        // console.log("here");
       });
     }
-  }, 100);
+  }, 500);
 
   window.addEventListener("click", () => {});
 
@@ -395,7 +401,7 @@ window.addEventListener("load", () => {
         );
 
         pickedCategories = leftItems;
-        console.log(leftItems);
+        // console.log(leftItems);
         trainingCategoriesList.innerHTML = "";
 
         leftItems.forEach((n) => {
@@ -407,7 +413,7 @@ window.addEventListener("load", () => {
 
   categoryInputs.forEach((n) => {
     n.addEventListener("change", (e) => {
-      console.log(typeInputs);
+      // console.log(typeInputs);
       if (e.target.checked) {
         let categoryLabel = n.getAttribute("data-label");
         let filtered = subCategoryItems.filter(
@@ -441,7 +447,7 @@ window.addEventListener("load", () => {
         );
         relatedInput.checked = false;
         pickedSubCategories = leftSubItems;
-        console.log(leftSubItems);
+        // console.log(leftSubItems);
         trainingSubcategoriesList.innerHTML = "";
 
         leftSubItems.forEach((n) => {

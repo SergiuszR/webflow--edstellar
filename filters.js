@@ -264,23 +264,23 @@ window.addEventListener("load", () => {
   //   searchMirrorInput.value = "";
   // });
 
-  let scrollBtn = document.querySelector("#scroll-btn");
+  // let scrollBtn = document.querySelector("#scroll-btn");
 
-  window.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
-      window.scrollIntoView(coursesFilter, {
-        time: 300,
-      });
-      courseSearchInput.focus();
-    }
-  });
+  // window.addEventListener("keypress", (event) => {
+  //   if (event.key === "Enter") {
+  //     window.scrollIntoView(coursesFilter, {
+  //       time: 300,
+  //     });
+  //     courseSearchInput.focus();
+  //   }
+  // });
 
-  scrollBtn.addEventListener("click", () => {
-    window.scrollIntoView(coursesFilter, {
-      time: 300,
-    });
-    courseSearchInput.focus();
-  });
+  // scrollBtn.addEventListener("click", () => {
+  //   window.scrollIntoView(coursesFilter, {
+  //     time: 300,
+  //   });
+  //   courseSearchInput.focus();
+  // });
 
   let filterHeader = document.querySelector(".filter_header");
   let sectionHeadWithSearch = document.querySelector(

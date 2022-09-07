@@ -4,15 +4,28 @@ let options = {
   threshold: 1.0,
 };
 
-let stepOneNumber = document.querySelector("#step-1");
-let stepTwoNumber = document.querySelector("#step-2");
-let stepThreeNumber = document.querySelector("#step-3");
-let stepFourNumber = document.querySelector("#step-4");
-let stepFiveNumber = document.querySelector("#step-5");
-let stepSixNumber = document.querySelector("#step-6");
+let triggers = Array.from(document.querySelectorAll(".how-it-works--step"));
+let targets = Array.from(
+  document.querySelectorAll(".how-it-works--main-content")
+);
 
-stepOneNumber.addEventListener("click", () => {
-  document.querySelector("#registration").scrollIntoView();
+steps[0].addEventListener("click", () => {
+  targets[0].scrollIntoView();
+});
+steps[1].addEventListener("click", () => {
+  targets[1].scrollIntoView();
+});
+steps[2].addEventListener("click", () => {
+  targets[2].scrollIntoView();
+});
+steps[3].addEventListener("click", () => {
+  targets[3].scrollIntoView();
+});
+steps[4].addEventListener("click", () => {
+  targets[4].scrollIntoView();
+});
+steps[5].addEventListener("click", () => {
+  targets[5].scrollIntoView();
 });
 
 const firstStep = new IntersectionObserver((entries) => {

@@ -9,21 +9,27 @@ let targets = document.querySelector(".how-it-works--main-content").children;
 
 triggers[0].addEventListener("click", () => {
   targets[0].scrollIntoView();
+  window.scrollBy(0, -20);
 });
 triggers[1].addEventListener("click", () => {
   targets[1].scrollIntoView();
+  window.scrollBy(0, -20);
 });
 triggers[2].addEventListener("click", () => {
   targets[2].scrollIntoView();
+  window.scrollBy(0, -20);
 });
 triggers[3].addEventListener("click", () => {
   targets[3].scrollIntoView();
+  window.scrollBy(0, -20);
 });
 triggers[4].addEventListener("click", () => {
   targets[4].scrollIntoView();
+  window.scrollBy(0, -20);
 });
 triggers[5].addEventListener("click", () => {
   targets[5].scrollIntoView();
+  window.scrollBy(0, -20);
 });
 
 const firstStep = new IntersectionObserver((entries) => {

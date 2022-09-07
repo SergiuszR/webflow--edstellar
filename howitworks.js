@@ -5,7 +5,7 @@ let options = {
 };
 
 let triggers = Array.from(document.querySelectorAll(".how-it-works--step"));
-let targets = document.querySelector(".how-it-works--main-content");
+let targets = Array.from(document.querySelector(".how-it-works--main-content"));
 
 triggers[0].addEventListener("click", () => {
   targets[0].scrollIntoView();

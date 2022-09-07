@@ -4,6 +4,17 @@ let options = {
   threshold: 1.0,
 };
 
+let stepOneNumber = document.querySelector("#step-1");
+let stepTwoNumber = document.querySelector("#step-2");
+let stepThreeNumber = document.querySelector("#step-3");
+let stepFourNumber = document.querySelector("#step-4");
+let stepFiveNumber = document.querySelector("#step-5");
+let stepSixNumber = document.querySelector("#step-6");
+
+stepOneNumber.addEventListener("click", () => {
+  window.scrollIntoView(window.document.querySelector("#registration"));
+});
+
 const firstStep = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {

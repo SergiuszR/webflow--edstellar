@@ -12,7 +12,7 @@ let stepFiveNumber = document.querySelector("#step-5");
 let stepSixNumber = document.querySelector("#step-6");
 
 stepOneNumber.addEventListener("click", () => {
-  window.scrollIntoView(window.document.querySelector("#registration"));
+  document.querySelector("#registration").scrollIntoView();
 });
 
 const firstStep = new IntersectionObserver((entries) => {

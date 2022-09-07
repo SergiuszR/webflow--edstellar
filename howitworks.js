@@ -1,7 +1,7 @@
 // navigation bar in expert page
 
 let options = {
-  threshold: 1.,
+  threshold: 1.0,
 };
 
 let triggers = Array.from(document.querySelectorAll(".how-it-works--step"));

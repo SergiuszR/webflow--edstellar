@@ -9,22 +9,22 @@ let targets = Array.from(
   document.querySelectorAll(".how-it-works--main-content")
 );
 
-steps[0].addEventListener("click", () => {
+triggers[0].addEventListener("click", () => {
   targets[0].scrollIntoView();
 });
-steps[1].addEventListener("click", () => {
+triggers[1].addEventListener("click", () => {
   targets[1].scrollIntoView();
 });
-steps[2].addEventListener("click", () => {
+triggers[2].addEventListener("click", () => {
   targets[2].scrollIntoView();
 });
-steps[3].addEventListener("click", () => {
+triggers[3].addEventListener("click", () => {
   targets[3].scrollIntoView();
 });
-steps[4].addEventListener("click", () => {
+triggers[4].addEventListener("click", () => {
   targets[4].scrollIntoView();
 });
-steps[5].addEventListener("click", () => {
+triggers[5].addEventListener("click", () => {
   targets[5].scrollIntoView();
 });
 

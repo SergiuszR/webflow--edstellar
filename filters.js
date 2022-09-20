@@ -282,6 +282,11 @@ window.addEventListener("load", () => {
   //   courseSearchInput.focus();
   // });
 
+  let showAll = document.querySelector("#show-all");
+  let categoryPillsBox = document.querySelector(".category-tags-wrapper");
+
+  categoryPillsBox.insertBefore(showAll, categoryPillsBox.firstChild);
+
   let filterHeader = document.querySelector(".filter_header");
   let sectionHeadWithSearch = document.querySelector(
     ".section-head.with-search"

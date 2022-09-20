@@ -11,7 +11,7 @@ window.addEventListener("scroll", navbarPosition);
 function navbarBg() {
   let navbar = document.querySelector(".container.navbar");
 
-  if (window.scrollY > 100) {
+  if (window.scrollY > 50) {
     navbar.classList.add("white-bg");
     navbar.classList.add("small");
   } else {

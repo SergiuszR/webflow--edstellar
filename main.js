@@ -42,7 +42,7 @@ window.addEventListener("load", () => {
         n.children[0].children[1].src =
           "https://global-uploads.webflow.com/62bcaf4c9767291fa1cb720f/62bcc1942862382d560bab0a_plus.svg";
       });
-    }, 40);
+    }, 10);
   } catch (error) {
     return;
   }

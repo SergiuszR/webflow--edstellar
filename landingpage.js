@@ -10,7 +10,7 @@ function runCounter() {
     roundProps: "val",
     onUpdate: function () {
       document.getElementById("counter1").innerHTML = Cont.val;
-    }
+    },
   });
 
   gsap.to(Cont, 5, {
@@ -19,7 +19,7 @@ function runCounter() {
     roundProps: "val",
     onUpdate: function () {
       document.getElementById("counter2").innerHTML = Cont.val;
-    }
+    },
   });
 
   gsap.to(Cont, 5, {
@@ -28,7 +28,7 @@ function runCounter() {
     roundProps: "val",
     onUpdate: function () {
       document.getElementById("counter3").innerHTML = Cont.val;
-    }
+    },
   });
 }
 

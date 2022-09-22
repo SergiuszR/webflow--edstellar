@@ -23,16 +23,3 @@ function navbarBg() {
 window.addEventListener("load", navbarBg);
 window.addEventListener("scroll", navbarBg);
 window.addEventListener("resize", navbarBg);
-
-let showAll = document.querySelector("#show-all");
-let pillItems = document.querySelectorAll(".pill-item-category");
-
-showAll.addEventListener("click", () => {
-  showAll.classList.add("active");
-});
-
-pillItems.forEach((n) => {
-  n.addEventListener("click", () => {
-    showAll.classList.remove("active");
-  });
-});

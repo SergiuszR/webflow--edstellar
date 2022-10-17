@@ -84,11 +84,29 @@ const history = new IntersectionObserver((entries) => {
       allNavLinks.forEach((n) => {
         n.classList.remove("active");
       });
-      let navLink = document.querySelector("#expert-history");
+      let navLink = document.querySelector("#expert-skills");
       navLink.classList.add("active");
       // console.log(entry.target);
     } else {
       let navLink = document.querySelector("#expert-history");
+      navLink.classList.remove("active");
+    }
+  });
+}, options);
+
+const projects = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      let sideBar = document.querySelector(".profile--sidebar-elements");
+      let allNavLinks = Array.from(sideBar.getElementsByTagName("a"));
+      allNavLinks.forEach((n) => {
+        n.classList.remove("active");
+      });
+      let navLink = document.querySelector("#expert-projects");
+      navLink.classList.add("active");
+      // console.log(entry.target);
+    } else {
+      let navLink = document.querySelector("#expert-projects");
       navLink.classList.remove("active");
     }
   });
@@ -116,5 +134,6 @@ about.observe(document.querySelector("#about"));
 trains.observe(document.querySelector("#trains"));
 experience.observe(document.querySelector("#experience"));
 education.observe(document.querySelector("#education"));
-history.observe(document.querySelector("#history"));
+history.observe(document.querySelector("#skills"));
+projects.observe(document.querySelector("#projects"));
 articles.observe(document.querySelector("#articles"));

@@ -1,9 +1,6 @@
 window.addEventListener("load", () => {
     // tabs content
-  
     let tabContent = document.querySelector("[wrapper='tabs-content']");
-  
-    console.log(tabContent)
   
     // tab menu variables
     let faqTab = document.querySelector("[tab='faq']");
@@ -17,21 +14,13 @@ window.addEventListener("load", () => {
     let caseTabContent = document.querySelector("[tab-content='case']");
     let ratingTabContent = document.querySelector("[tab-content='ratings']");
   
+    // empty collection divs (from Webflow)
     let faqEmpty = faqTabContent.querySelector(".w-dyn-empty");
     let blogsEmpty = blogsTabContent.querySelector(".w-dyn-empty");
     let caseEmpty = caseTabContent.querySelector(".w-dyn-empty");
     let ratingEmpty = ratingTabContent.querySelector(".w-dyn-empty");
   
-    // console.log(faqTabContent);
-    // console.log(faqEmpty);
-    // console.log(blogsEmpty);
-    // console.log(caseEmpty);
-    // console.log(ratingEmpty);
-    // console.log(blogsTabContent)
-    // console.log(caseTabContent)
-    // console.log(ratingTabContent)
-    // console.log(blogTab)
-  
+    // check if empty divs exist in each tab content
     function checkFaq() {
       if (faqEmpty !== null) {
         faqTab.style.display = "none";
@@ -92,25 +81,17 @@ window.addEventListener("load", () => {
     checkAllTabs();
   
   
-    // console.log(tabContent);
-  
-    // let allTabs = Array.from(document.querySelector("#filtered-tabs").children)
-    // console.log(allTabs)
-  
-  
-  
     // look for divs that they're not empty
   
     let nonEmptyDivs = document.querySelectorAll("[data='nonempty']");
     let nonEmptyTabs = document.querySelectorAll("[data='non-empty-tab']");
-  
-    // console.log(nonEmptyDivs);
-    // console.log(nonEmptyTabs)
-  
+    
+    // remove current class from each item
     nonEmptyTabs.forEach((n) => {
       n.classList.remove("w--current");
     })
   
+    // add current and active classes to first item in tab content
     nonEmptyDivs[0].classList.add("w--tab-active");
     nonEmptyTabs[0].classList.add("w--current")
   });

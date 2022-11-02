@@ -1,5 +1,5 @@
 /* Countries made by goodwebhost.co.uk  */
-var countries = '<option value="India">India</option>
+var countries = `<option value="India">India</option>
     <option value="United States of America">United States of America</option>
     <option value="Germany">Germany</option>
     <option value="United Kingdom">United Kingdom</option>
@@ -244,4 +244,4 @@ var countries = '<option value="India">India</option>
     <option value="Yemen">Yemen</option>
     <option value="Zaire">Zaire</option>
     <option value="Zambia">Zambia</option>
-    <option value="Zimbabwe">Zimbabwe</option>';
+    <option value="Zimbabwe">Zimbabwe</option>`

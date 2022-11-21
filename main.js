@@ -23,3 +23,6 @@ function navbarBg() {
 window.addEventListener("load", navbarBg);
 window.addEventListener("scroll", navbarBg);
 window.addEventListener("resize", navbarBg);
+
+// footer date
+document.getElementById("year").innerHTML = new Date().getFullYear();

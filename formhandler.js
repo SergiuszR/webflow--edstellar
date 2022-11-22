@@ -56,5 +56,5 @@ bookADemoSubmit.addEventListener("click", () => {
     headers: headersList,
   })
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then(() => (window.location = "/thank-you-edstellar"));
 });

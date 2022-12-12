@@ -7,7 +7,10 @@
 //   needs,
 //   codePhone;
 
+// console.log("vs")
+
 // let bookADemoSubmit = document.querySelector("[app='submit_demo']");
+// let errorBox = document.querySelector("#error-box");
 
 // bookADemoSubmit.addEventListener("click", () => {
 //   fullName = document.querySelector("[name='full_name']").value;
@@ -50,11 +53,17 @@
 //     },
 //   });
 
-//   fetch("https://test-portal.edstellar.com/api/v1/auth/book_demo", {
+//   if (fullName !== "" && workMail !== "" && companyName !== "" && country !== "" && phoneNumber !== "" && codePhone !== "" && jobTitle !== "" && needs !== "") {
+//     errorBox.style.display = "none";
+//     fetch("https://test-portal.edstellar.com/api/v1/auth/book_demo", {
 //     method: "POST",
 //     body: bodyContent,
 //     headers: headersList,
 //   })
 //     .then((response) => response.json())
 //     .then(() => (window.location = "/thank-you-edstellar"));
+//   } else {
+//     errorBox.style.display = "block";
+//   }
+
 // });
